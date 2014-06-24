@@ -1,0 +1,27 @@
+[user]
+	email = emmanuel@dudamobile.com
+	name = Emmanuel Alhadeff
+[push]
+	default = simple
+[credential]
+	helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+[alias]
+	br = branch
+	co = checkout
+	pp = !git pull --rebase && git push
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	q = status
+	p = pull --rebase
+	ls = log --pretty=format:\"%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn]\" --decorate
+	ll = log --pretty=format:\"%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn]\" --decorate --numstat
+	fl = log -u
+	gr = grep -Ii
+	rh = reset --hard
+	sl = stash list
+	sa = stash apply
+	ss = stash save
+	a = add -i
+	cp = cherry-pick
+	w = log --pretty=format:\"%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn]\" --decorate -1 -p
+	cm = commit
