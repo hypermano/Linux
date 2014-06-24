@@ -10,7 +10,7 @@ esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
-HISTCONTROL=ignoreboth
+HISTCONTROL=ignoreboth:erasedups
 
 # append to the history file, don't overwrite it
 shopt -s histappend
@@ -94,6 +94,7 @@ alias slp='sudo pm-suspend'
 alias g=git
 alias h1='history 10'
 alias sgit='smartgithg &> /dev/null &'
+alias psf='ps -ef | grep'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -211,3 +212,5 @@ function git_diff {
 
 PS1='`if [ $? = 0 ]; then echo "\[\033[01;32m\]✔"; else echo "\[\033[01;31m\]✘";fi` \[\033[01;30m\]\h\[\033[01;34m\] \w$(git_color)$(__git_ps1 " %s")\[\033[01;30m\] $(git_diff)\n>\[\033[00m\] '
 export PS1
+
+fortune | cowsay
