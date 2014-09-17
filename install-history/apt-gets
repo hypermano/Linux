@@ -1,0 +1,91 @@
+Commandline: apt-get --yes install lupin-casper apt-clone archdetect-deb btrfs-tools cifs-utils cryptsetup cryptsetup-bin dmraid dpkg-repack ecryptfs-utils firefox-locale-en firefox-locale-es firefox-locale-zh-hans gir1.2-json-1.0 gir1.2-timezonemap-1.0 gir1.2-xkl-1.0 gparted grub-common grub-gfxpayload-lists grub-pc grub-pc-bin grub2-common jfsutils keyutils kpartx kpartx-boot language-pack-en language-pack-en-base language-pack-es language-pack-es-base language-pack-gnome-en language-pack-gnome-en-base language-pack-gnome-es language-pack-gnome-es-base language-pack-gnome-zh-hans language-pack-gnome-zh-hans-base language-pack-zh-hans language-pack-zh-hans-base libcryptsetup4 libdebian-installer4 libdevmapper-event1.02.1 libdmraid1.0.0.rc16 libecryptfs0 libgtkmm-2.4-1c2a liblzo2-2 libnss3-1d libreadline5 libreoffice-help-en-us linux-headers-3.13.0-24 linux-headers-3.13.0-24-generic linux-headers-generic linux-image-3.13.0-24-generic linux-image-extra-3.13.0-24-generic linux-signed-generic linux-signed-image-3.13.0-24-generic linux-signed-image-generic lvm2 metacity os-prober python3-icu python3-pam rdate reiserfsprogs sbsigntool ubiquity ubiquity-casper ubiquity-frontend-gtk ubiquity-slideshow-ubuntu ubiquity-ubuntu-artwork wamerican watershed xfsprogs
+Commandline: apt-get install guake
+Commandline: apt-get install nodejs
+Commandline: apt-get install npm
+Commandline: apt-get install git
+Commandline: apt-get install eclipse
+Commandline: apt-get install node
+Commandline: apt-get remove node
+Commandline: apt-get remove nodejs nodejs-dev npm
+Commandline: apt-get install nodejs
+Commandline: apt-get install mongodb-org
+Commandline: apt-get autoremove
+Commandline: apt-get remove eclipse
+Commandline: apt-get autoremove
+Commandline: apt-get install tomcat7
+Commandline: apt-get install docker.io
+Commandline: apt-get install alien libaio1 unixodbc vim
+Commandline: apt-get install dconf-tools
+Commandline: apt-get install tree
+Commandline: apt-get remove tomcat7
+Commandline: apt-get autoremove
+Commandline: apt-get install imwheel
+Commandline: apt-get remove imwheel
+Commandline: apt-get install maven
+Commandline: apt-get install xclip
+Commandline: apt-get install extundelete
+Commandline: apt-get remove extundelete
+Commandline: apt-get install nautilus-open-terminal
+Commandline: apt-get install gnome-tweak-tool
+Commandline: apt-get remove gnome-tweak-tool
+Commandline: apt-get install libgnome-keyring-dev
+Commandline: apt-get install smartgithg
+Commandline: apt-get install execstack
+Commandline: apt-get remove sqldeveloper
+Commandline: apt-get install compiz compizconfig-settings-manager compiz-plugins-extra compiz-plugins-main compiz-plugins
+Commandline: apt-get install gitk
+Commandline: apt-get install gitg
+Commandline: apt-get remove gitg
+Commandline: apt-get install markdown
+Commandline: apt-get install automake
+Commandline: apt-get autoremove
+Commandline: apt-get install curl
+Commandline: apt-get install build-essential gcc make automake autoconf libtool pkg-config intltool libglib2.0-dev libfuse-dev libxml2-dev libevent-dev libssl-dev
+Commandline: apt-get -y upgrade
+Commandline: apt-get install build-essential pkg-config libfuse-dev libcurl4-openssl-dev libxml2-dev
+Commandline: apt-get install python-dateutil
+Commandline: apt-get install meld
+Commandline: apt-get install cowsay
+Commandline: apt-get install sl
+Commandline: apt-get install fortune
+Commandline: apt-get install ktorrent
+Commandline: apt-get install jmeter
+Commandline: apt-get install gitg
+Commandline: apt-get install gtk-recordmydesktop
+Commandline: apt-get remove gtk-recordmydesktop
+Commandline: apt-get install webhttrack
+Commandline: apt-get remove webhttrack
+Commandline: apt-get install httrack
+Commandline: apt-get install ant-contrib
+Commandline: apt-get install aptitude
+Commandline: apt-get install indicator-multiload
+Commandline: apt-get install gnome-do
+Commandline: apt-get install conky
+Commandline: apt-get remove conky
+Commandline: apt-get install chromium-browser
+Commandline: apt-get install ruby
+Commandline: apt-get autoremove
+Commandline: apt-get remove smartgithg
+Commandline: apt-get autoremove
+Commandline: apt-get dist-upgrade
+Commandline: apt-get install laptop-mode-tools
+Commandline: apt-get install tlp tlp-rdw
+Commandline: apt-get remove laptop-mode-tools
+Commandline: apt-get install diodon
+Commandline: apt-get remove diodon
+Commandline: apt-get autoremove
+Commandline: apt-get install imagemagick
+Commandline: apt-get install pngquant
+Commandline: apt-get install openssh-server
+Commandline: apt-get remove grive
+Commandline: apt-get autoremove
+Commandline: apt-get install grive-tools
+Commandline: apt-get install evolution
+Commandline: apt-get remove evolution
+Commandline: apt-get install gtg
+Commandline: apt-get autoremove
+Commandline: apt-get install tomboy
+Commandline: apt-get install synapse
+Commandline: apt-get install traceroute
+Commandline: apt-get install google-chrome-stable
+Commandline: apt-get autoremove
