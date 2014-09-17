@@ -84,66 +84,13 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-alias dl=del.sh
-alias slp='sudo pm-suspend'
-alias g=git
-alias h1='history 10'
-alias sgit='smartgithg &> /dev/null &'
-alias psf='ps -ef | grep'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-# autocompletion for git
-source /usr/share/bash-completion/completions/git
-complete -o default -o nospace -F _git g
-# complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \
-#     || complete -o default -o nospace -F _git g
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
-
-# exports for oracle
-export ORACLE_HOME=/u01/app/oracle/product/11.2.0/xe
-export ORACLE_SID=XE
-export NLS_LANG=`$ORACLE_HOME/bin/nls_lang.sh`
-export ORACLE_BASE=/u01/app/oracle
-export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
-export PATH=$ORACLE_HOME/bin:$PATH
-export CDPATH=$PATH:~/Sources/
-
-# colorful prompt
-COLOR_PINK="\033[35m"
-COLOR_YELLOW="\033[0;33m"
-COLOR_GREEN="\033[0;32m"
-COLOR_OCHRE="\033[38;5;95m"
-COLOR_BLUE="\033[0;34m"
-COLOR_WHITE="\033[0;37m"
-COLOR_PURPLE="\e[0;35m"
-COLOR_RESET="\033[0m"
+# UTILITIES ---------------------------------------------------------------------------------------
+function psf() {
+	local args="$(tput cols)"
+	args=$args'g'
+	#echo -e 'ps -ef | grep '$1' --color=always tomcat | sed s/.//'$args
+	ps -ef | grep --color=always $1 | sed s/.//$args
+}
 
 function s3ls() {
 	local bucket="image-res-test/"
@@ -164,8 +111,90 @@ function s3ls() {
 	fi
 
 	echo -e "~/Apps/s3cmd-master/s3cmd ls "$args"\n"
-	~/Apps/s3cmd-master/s3cmd ls $args | tee >(echo -e "\n=== "$(wc -l)" results ===") | egrep --color "\b(DIR)\b|$"
+	~/Apps/s3cmd-master/s3cmd ls $args | tee >(echo -e "\n=== "$(wc -l)" results ===") | sed -e 's_s3://\([^/]*\)_http://\1.s3.amazonaws.com_' | egrep --color "\b(DIR)\b|$"
 }
+
+function cms() {
+	local path=$1
+	local temp=$(date +%N)
+	wget $1 -O $temp
+	mv $temp ~/Apps/Tomcat7/logs/duda.$(date +%Y-%m-%d).cms.log
+}
+
+function extract()
+{
+	if [[ -f "$1" ]] ; then
+		case "$1" in
+			*.tar.bz2) tar xjf "$1" ;;
+			*.tar.gz) tar xzf "$1" ;;
+			*.tar.Z) tar xzf "$1" ;;
+			*.bz2) bunzip2 "$1" ;;
+			*.rar) unrar x "$1" ;;
+			*.gz) gunzip "$1" ;;
+			*.jar) unzip "$1" ;;
+			*.tar) tar xf "$1" ;;
+			*.tbz2) tar xjf "$1" ;;
+			*.tgz) tar xzf "$1" ;;
+			*.zip) unzip "$1" ;;
+			*.Z) uncompress "$1" ;;
+			*) echo "'$1' cannot be extracted." ;;
+		esac
+	else
+			echo "'$1' is not a file."
+	fi
+}
+
+# EXPORTS -----------------------------------------------------------------------------------------
+export ORACLE_HOME=/u01/app/oracle/product/11.2.0/xe
+export ORACLE_SID=XE
+export NLS_LANG=`$ORACLE_HOME/bin/nls_lang.sh`
+export ORACLE_BASE=/u01/app/oracle
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
+export PATH=$ORACLE_HOME/bin:$PATH
+export CDPATH=$PATH:~/Sources/
+export CHROME_DEVEL_SANDBOX=/opt/google/chrome/chrome-sandbox
+
+# ALIASES -----------------------------------------------------------------------------------------
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias ?=grep
+alias dl=del.sh
+alias g=git
+alias gui=nautilus
+alias h1='history 10'
+alias p=pick.sh
+alias ports='netstat -tulanp'
+alias rm='rm -I --preserve-root'
+alias slp='sudo pm-suspend'
+
+alias back='cd $OLDPWD'
+alias ..="cd .."
+alias ...="cd ../.."
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# Colorful prompt ---------------------------------------------------------------------------------
+COLOR_PINK="\033[35m"
+COLOR_YELLOW="\033[0;33m"
+COLOR_GREEN="\033[0;32m"
+COLOR_OCHRE="\033[38;5;95m"
+COLOR_BLUE="\033[0;34m"
+COLOR_WHITE="\033[0;37m"
+COLOR_PURPLE="\e[0;35m"
+COLOR_RESET="\033[0m"
 
 function git_color {
   local git_status="$(git status 2> /dev/null)"
@@ -210,7 +239,29 @@ function git_diff {
 	echo -e $ret
 }
 
-PS1='`if [ $? = 0 ]; then echo "\[\033[01;32m\]✔"; else echo "\[\033[01;31m\]✘";fi` \[\033[01;30m\]\h\[\033[01;34m\] \w$(git_color)$(__git_ps1 " %s")\[\033[01;30m\] $(git_diff)\n>\[\033[00m\] '
-export PS1
+export PS1='`if [ $? = 0 ]; then echo "\[\033[01;32m\]✔"; else echo "\[\033[01;31m\]✘";fi` \[\033[01;30m\]\h\[\033[01;34m\] \w$(git_color)$(__git_ps1 " %s")\[\033[01;30m\] $(git_diff)\n>\[\033[00m\] '
+
+# AUTOCOMPLETES -----------------------------------------------------------------------------------
+# autocompletion for git
+source /usr/share/bash-completion/completions/git
+complete -o default -o nospace -F _git g
+# complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \
+#     || complete -o default -o nospace -F _git g
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+# STARTUP -----------------------------------------------------------------------------------------
 
 fortune | cowsay
+
+source ~/.fzf.bash
+
