@@ -12,10 +12,10 @@ fi
 if [ $# == 1 ]
 then	
 		echo "Connecting to $srv"
-		ssh -i /home/paedolos/Apps/Git/Tomcat.pem root@$srv
+		ssh -i /home/emmanuel/apps/eclipse/Tomcat.pem root@$srv
 elif [ $# == 2 ]; then
 	echo "Connecting to $srv"
-	ssh -i /home/paedolos/Apps/Git/Tomcat.pem root@$srv "$2"
+	ssh -i /home/emmanuel/apps/eclipse/Tomcat.pem root@$srv "$2"
 else
 	echo "Number of args should be maximum 2 "
 fi

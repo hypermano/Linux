@@ -1,0 +1,101 @@
+Prefs\ version=20
+Autosave=1
+Autosave\ interval=5
+Create\ new\ document=1
+Create\ new\ template=
+Default\ font=Courier 10 Pitch
+Load\ last\ document=0
+Last\ document\ path=
+Remember\ position=1
+Units\ of\ measurement=1
+Autocomplete=1
+Autocomplete\ next\ character=1
+Autocapitalize=1
+Show\ invisibles=0
+Smart\ quotes=0
+Smart\ selection=1
+Spell\ checking=1
+Reset\ UI=0
+Prefs\ UI\ version=1
+UI\ brightness=0.50
+UI\ theme=0
+Revision\ colors=1
+Show\ splashscreen=1
+Center\ typing=0
+Always\ show\ ruler=0
+Always\ show\ shortcuts=0
+Zoom=1.00
+View\ mode=1
+Navigator\ show=1
+Navigator\ page\ count=1
+Username=Demonstration version
+Registration\ key=
+Register\ prompt\ once=0
+Last\ check=0
+Prefs\ value=0
+Last\ update\ check=1413695136
+Document\ directory=/home/emmanuel/repo/scripts
+Last\ set\ timer=1800
+Name=
+[Recent\ documents]
+List\ items=9
+0=/home/emmanuel/repo/scripts/ATi3C.1.fadein
+1=ATi3C.2.fadein
+2=/home/emmanuel/repo/scripts/ATi3C.2.fadein
+3=PLSiS.fadein
+4=/home/emmanuel/repo/scripts/Promised Lies, Songs in Silence/PLSiS.fadein
+5=ATi3C.3.fadein
+6=/home/emmanuel/repo/scripts/ATi3C.3.fadein
+7=ATi3C.1.fadein
+8=ATi3C.fadein
+[Tools]
+Tools\ version=1
+Fountain\ enabled=1
+Online\ tools=1
+Dictionary\ URL=http://dictionary.reference.com/browse/%s
+Thesaurus\ URL=http://thesaurus.reference.com/browse/%s
+Custom\ dictionary=0
+Custom\ thesaurus=0
+Last\ lookup=0
+[Application\ window]
+Xpos=50
+Ypos=50
+Width=1024
+Height=768
+Fullscreen=0
+Maximized=1
+Layout=layout2|name=document_notebook;caption=;state=256;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=320;besth=255;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=toolbar_panel;caption=;state=2099710;dir=2;layer=0;row=1;pos=0;prop=7337;bestw=260;besth=31;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=300;floath=63|name=format_notebook;caption=;state=2098684;dir=2;layer=0;row=1;pos=0;prop=100000;bestw=320;besth=255;minw=240;minh=212;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=480;floath=510|name=navigator_notebook;caption=;state=2098684;dir=2;layer=0;row=1;pos=1;prop=100000;bestw=320;besth=255;minw=240;minh=212;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=480;floath=510|dock_size(5,0,0)=307|dock_size(2,0,1)=307|
+User\ layout=layout2|name=find_panel;caption=;state=2;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=20;besth=41;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=document_notebook;caption=;state=256;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=320;besth=255;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=toolbar_panel;caption=;state=2099710;dir=2;layer=0;row=1;pos=0;prop=8412;bestw=260;besth=31;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=300;floath=63|name=format_notebook;caption=;state=2098684;dir=2;layer=0;row=1;pos=0;prop=100000;bestw=320;besth=255;minw=240;minh=212;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=480;floath=510|name=navigator_notebook;caption=;state=2098684;dir=2;layer=0;row=1;pos=1;prop=100000;bestw=320;besth=255;minw=240;minh=212;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=480;floath=510|dock_size(5,0,0)=307|dock_size(2,0,1)=307|
+[Colors]
+Highlight=yellow
+Create\ synopsis=rgb(64, 160, 255)
+Custom\ colors=0
+Custom\ text=black
+Custom\ background=white
+Use\ custom\ UI\ color=0
+Custom\ UI=rgb(32, 32, 32)
+[Search\ history]
+0=
+1=
+2=
+3=
+4=
+5=
+6=
+7=
+8=
+[Find\ history]
+0=
+1=
+2=
+3=
+4=
+5=
+6=
+7=
+8=
+[Script\ errors]
+Spaces=1
+Blank\ lines=1
+Dialogue=1
+Standard=1
